@@ -1,0 +1,16 @@
+.fp {
+	min-height: 80vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.63)), url('Pictures/pitch.png');
+	background-size: cover;
+	background-repeat: none;
+}
+
+.ncolor {
+	background-color: rgb(216, 216, 226);
+	color: cornsilk;
+}
+
+.sp {
+	min-height: 80vh;
+	background-color: aliceblue;
+}
