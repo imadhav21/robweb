@@ -1,0 +1,10 @@
+.cb {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Pictures/pitch.png');
+	background-size: cover;
+	background-position: top;
+}
+
+.fp {
+	background-color: rgb(215, 226, 236);
+	min-height: 100vh;
+}
