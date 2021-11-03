@@ -16,7 +16,7 @@
     <title>Rob 102</title>
 </head>
 <body>
-    <nav class ="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class ="navbar navbar-expand-md navbar-dark fixed-top nav-dark" id="navbarnavbar">
 
         <a href="#" class="text-white text-center lead"><p class = 'h3 font-weight-light'>Robotics 102</p></a>
 
@@ -78,14 +78,12 @@
         </div>
     </div>
 
-    <hr class = "my-5">    
-
     <div class="content_container">
     
         <div class="content_item">
-            <h2 class="content_item_title">                 
+            <h2>                 
                 Understanding What is Going On                        
-            </h5>
+            </h2>
             <p>
                 There were two main methods of the distance transform used, namely the distanceTransformSlow() and distanceTransformManhattan(). 
                 
@@ -107,9 +105,9 @@
             </p>
         </div>
         <div class="content_item">
-            <h5 class="content_item_title">                 
+            <h2>                 
                 The strengths and weaknesses of this implementation                        
-            </h5>
+            </h2>
             <p>
                 One of the strengths of the potential field application is that it is able to avoid obstacles well in theory, albeit at a low level. The repulsive field helps to repel the robot away from the walls so it can get to the goal.
                 <br><br>
@@ -122,21 +120,24 @@
             </p>
         </div>
     </div>
-        
-    
-             
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+         
     <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-50px";
-        }
-        }
+       $(function() {var header = $(".navbar");
+  
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+            if (scroll >= 50) {
+                header.addClass("nav-dark");
+            } else {
+                header.removeClass("nav-dark");
+            }
+        });
+    
+         });
 
     </script>
+
 </body>
 </html>

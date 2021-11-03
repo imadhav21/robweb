@@ -3,6 +3,11 @@ body{
 		font-size: 16px;
 }
 
+h2{
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
 .cb {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Pictures/pitch.png');
 	background-size: cover;
@@ -14,30 +19,47 @@ body{
 	min-height: 100vh;
 }
 
-.media_container, .content_container{
-	display: grid;
-	grid-template-columns: 1fr 1200px 1fr;	
+.nav_dark{
+	background-color: #121212;
+	border-bottom: white 2px;
 }
 
-.media_container > *, .content_container > *{
-	grid-column: 2/3;
+.media_container, .content_container{
+	margin-top: 15px;
+	padding-top: 25px;
+	display: grid;
+}
+
+@media screen and (min-width: 500px) {
+	.media_container, .content_container{
+		display: grid;
+		grid-template-columns: 1fr 1400px 1fr;	
+	}
+	
+	.media_container > *, .content_container > *{
+		grid-column: 2/3;
+	}
 }
 
 .content_container{
 	background-color: #121212;
 	color: ivory;
+	margin-top: 15px;
+	padding-top: 20px;
 }
 
 .video_container{
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	align-content: space-around;
 }
 
 .video_item{
 	background-color: grey;
-	width: 280px;
 	margin: 10px;
+	max-width: 420px;
+	flex-grow: 1;
 	color: ivory;
 }
 
@@ -54,8 +76,25 @@ body{
 }
 
 .video_item_iframe{
-	width: 280px;
-	margin-bottom: -10px;
+	width: 100%;
+	height:calc((70vw - 40px) * 0.5625) ;
+	margin-bottom: -6px;
+}
+
+@media screen and (min-width: 500px) {
+	.video_item{
+		background-color: grey;
+		margin: 10px;
+		max-width: 300px;
+		flex-grow: 1;
+		color: ivory;
+	}
+
+	.video_item_iframe{
+		width: inherit;
+		height: inherit;
+		margin-bottom: -6px;
+	}
 }
 
 p{
