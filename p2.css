@@ -77,7 +77,7 @@ h2{
 }
 
 .video_item_iframe{
-	
+	height:calc((70vw - 40px) * 0.5625) ;
 	margin-bottom: -6px;
 }
 
@@ -92,8 +92,7 @@ h2{
 	}
 
 	.video_item_iframe{
-		width: inherit;
-		height: inherit;
+		height: calc((70vw - 40px) * 0.5625);
 		margin-bottom: -6px;
 	}
 }
@@ -108,11 +107,11 @@ p{
 }
 
 .hide{
-	display: none;
+	visibility: hidden;
 }
 
 .train:hover + .hide {
-	display: block;
+	visibility: visible;
 	color: red;
   }
   
