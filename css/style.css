@@ -1,0 +1,133 @@
+body{
+    margin: 1px;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #6185f8 0% 93%, #138200 93% 95%, #954b0c 95% 97%, #684632 97% 100%);
+    font-size: 16px; 
+    font-family: 'Press Start 2P', cursive;
+}
+
+* {cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1114.cur), auto !important;}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+}
+
+.controls{
+    align-items: center;
+    justify-content: center;
+}
+
+video{
+    align-self: center;
+    height: 85vh;
+    aspect-ratio: 16/9;
+}
+
+.controls{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+.logo{
+    width: 18rem;
+    background-color: white;
+    padding: 0.3rem 0.3rem 0.5rem 0.3rem;
+    border-radius: 0 0 25px 25px;
+
+}
+
+.no_landscape{
+    display: none;
+}
+
+.load_game{
+    width: 35rem;
+    height: 9rem;
+    justify-self: center;
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+    border-width: 15px;
+    border-color: yellow;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.media{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.load_game:hover{
+    transform: scale(1.03);
+}
+
+video{
+    padding-bottom: 20px;
+}
+
+.remove{
+    display: none;
+}
+
+.mt{
+    margin-top: 3rem;
+}
+
+@media screen and (orientation:portrait) {
+    video{
+        display: none;
+    }
+
+    .no_landscape{
+        display: inline;
+    }
+}
+
+@keyframes grow_logo {
+    from {
+        width: 50px;
+        opacity: 0;
+    }
+    to {
+        width: 425px;
+        opacity: 100%;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    header > img {
+        animation-name: none;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    body > header{
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav_links{
+        justify-content: center;
+    }
+}
