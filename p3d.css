@@ -1,0 +1,118 @@
+body{
+	font-family: 'IBM Plex Sans', sans-serif;
+		font-size: 16px;
+}
+
+h2{
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+.cb {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Pictures/pitch.png');
+	background-size: cover;
+	background-position: top;
+}
+
+.fp {
+	background-color: rgb(238, 240, 223);
+	min-height: 100vh;
+}
+
+.nav_dark{
+	background-color: #0d177481;
+	border-bottom: white 2px;
+}
+
+.media_container, .content_container{
+	margin-top: 15px;
+	padding-top: 25px;
+	display: grid;
+}
+
+@media screen and (min-width: 500px) {
+	.media_container, .content_container{
+		display: grid;
+		grid-template-columns: 1fr 1400px 1fr;	
+	}
+	
+	.media_container > *, .content_container > *{
+		grid-column: 2/3;
+	}
+}
+
+.content_container{
+	background-color: #121212;
+	color: ivory;
+	margin-top: 15px;
+	padding-top: 20px;
+}
+
+.video_container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+
+.video_item{
+	background-color: grey;
+	margin: 10px;
+	max-width: 520px;
+	min-height: 300px;
+	flex-grow: 1;
+	color: ivory;
+}
+
+.video_item:hover{
+	transform: scale(1.75);
+	transition-duration: 0.1s;
+	background-color: white;
+	color: black;
+}
+
+.video_item_title{
+	color:inherit;
+	padding: 5px;
+}
+
+.video_item_iframe{
+	
+	margin-bottom: -6px;
+}
+
+@media screen and (min-width: 500px) {
+	.video_item{
+		background-color: grey;
+		margin: 10px;
+		max-width: 400px;
+		min-height: 300px;
+		flex-grow: 1;
+		color: ivory;
+	}
+
+	.video_item_iframe{
+		width: inherit;
+		height: inherit;
+		margin-bottom: -6px;
+	}
+}
+
+p{
+	font-size: 1.3rem;
+}
+
+.sp {
+	min-height: 80vh;
+	background-color: rgb(4, 7, 48);
+}
+
+.hide{
+	visibility: hidden;
+}
+
+.train:hover + .hide {
+	visibility: visible;
+	color: red;
+  }
+  
